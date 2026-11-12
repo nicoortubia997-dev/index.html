@@ -1,1 +1,155 @@
-# index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tu Comercio Online</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#111111; --card:#1c1c1c; --text:#ffffff; --muted:#b5b5b5;
+  --orange:#ff7a00; --gold:#d4a017; --on-orange:#111111; --line:#333333;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#ffffff; --card:#f5f3ef; --text:#111111; --muted:#555555;
+    --orange:#e66a00; --gold:#a97c00; --on-orange:#ffffff; --line:#dddddd;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#ffffff; --card:#f5f3ef; --text:#111111; --muted:#555555;
+  --orange:#e66a00; --gold:#a97c00; --on-orange:#ffffff; --line:#dddddd;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#111111; --card:#1c1c1c; --text:#ffffff; --muted:#b5b5b5;
+  --orange:#ff7a00; --gold:#d4a017; --on-orange:#111111; --line:#333333;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+.brand{font-weight:800;font-size:1.1rem;letter-spacing:.2px}
+.brand b{color:var(--orange)}
+.btn{display:inline-block;background:var(--orange);color:var(--on-orange);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px}
+.btn.small{padding:9px 18px;font-size:.9rem}
+.hero{text-align:center;padding:72px 0 64px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--gold);margin:0 auto 22px}
+.hero h1{font-size:clamp(2.2rem,9vw,3.8rem);line-height:1.05;margin:0 0 6px;font-weight:800}
+.hero h1 span{color:var(--orange);display:block}
+.rule{width:120px;height:3px;background:var(--gold);margin:22px auto;border:0}
+.hero p{font-size:1.2rem;color:var(--muted);margin:0 auto 30px;max-width:520px}
+section{padding:52px 0;border-top:1px solid var(--line)}
+h2{font-size:1.7rem;margin:0 0 8px}
+h2::after{content:"";display:block;width:50px;height:3px;background:var(--gold);margin-top:10px}
+.sub{color:var(--muted);margin:14px 0 28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card p{margin:0 0 14px;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--orange);border:1px solid var(--orange);border-radius:999px;padding:3px 12px}
+.price{font-weight:700;color:var(--gold);text-decoration:none}
+.work{display:flex;gap:16px;align-items:flex-start}
+.work .ico{flex:0 0 52px;height:52px;border-radius:12px;background:var(--orange);color:var(--on-orange);display:flex;align-items:center;justify-content:center;font-weight:800}
+.contact{text-align:center}
+.contact h2::after{margin-left:auto;margin-right:auto}
+.info{margin-top:26px;color:var(--muted)}
+.info a{color:var(--orange);font-weight:700;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Tu Comercio <b>Online</b></div>
+    <a class="btn small" href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div class="dot"></div>
+      <h1>Tu Comercio <span>Online</span></h1>
+      <hr class="rule">
+      <p>Tu página web y tu caja, en un solo lugar.</p>
+      <a class="btn" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20comercio" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <p class="sub">Soluciones simples para comercios de Salta que quieren vender más.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Creación de página web</h3>
+          <p>Tu página con carta o productos, fotos, ubicación, botón de WhatsApp y los colores de tu marca.</p>
+          <a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Consultá el precio →</a>
+        </div>
+        <div class="card">
+          <h3>App de caja y stock</h3>
+          <p>Una app para tu local: control de stock, ventas y caja con apertura y cierre.</p>
+          <a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20sistema%20de%20caja%20y%20stock" target="_blank" rel="noopener">Consultá el precio →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="caja">
+    <div class="wrap">
+      <h2>App de caja y stock</h2>
+      <p class="sub">Una app simple para llevar tu negocio en orden, sin planillas ni cuadernos.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Control de stock</h3>
+          <p>Sabé qué tenés, qué se vende más y qué te falta reponer.</p>
+        </div>
+        <div class="card">
+          <h3>Ventas realizadas</h3>
+          <p>Registro de cada venta del día, siempre a mano y ordenado.</p>
+        </div>
+        <div class="card">
+          <h3>Caja con apertura y cierre</h3>
+          <p>Abrí y cerrá la caja cada día y controlá que los números cierren.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabajos">
+    <div class="wrap">
+      <h2>Trabajos</h2>
+      <p class="sub">Algunos ejemplos de lo que armamos.</p>
+      <div class="card work">
+        <div class="ico">CO</div>
+        <div>
+          <h3>Confitería Once · Salta</h3>
+          <p>Página con lema, carta de hamburguesas y un diseño tipo mural de pizarra negra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <h2>¿Hablamos?</h2>
+      <p class="sub">Contanos qué necesita tu comercio y te respondemos por WhatsApp.</p>
+      <a class="btn" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20comercio" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      <p class="info">WhatsApp: <a href="https://wa.me/5493875528143" target="_blank" rel="noopener">387 552-8143</a><br>Instagram: <a href="https://www.instagram.com/tucomercio.online/" target="_blank" rel="noopener">@tucomercio.online</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Tu Comercio Online · Salta, Argentina</div>
+</footer>
+</body>
+</html>
