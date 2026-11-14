@@ -35,8 +35,13 @@
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
 .wrap{max-width:880px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:31}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:16px 20px 8px}
+.nav{display:flex;gap:20px;overflow-x:auto;order:3;width:100%;padding-bottom:8px;white-space:nowrap}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--orange)}
+@media (min-width:760px){.nav{order:0;width:auto;padding-bottom:0}header .wrap{padding:16px 20px}}
 .brand{font-weight:800;font-size:1.1rem;letter-spacing:.2px}
 .brand b{color:var(--orange)}
 .btn{display:inline-block;background:var(--orange);color:var(--on-orange);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px}
@@ -62,7 +67,21 @@ h2::after{content:"";display:block;width:50px;height:3px;background:var(--gold);
 .contact{text-align:center}
 .contact h2::after{margin-left:auto;margin-right:auto}
 .info{margin-top:26px;color:var(--muted)}
+.promo{background:var(--orange);color:var(--on-orange);text-align:center;padding:10px 16px;font-weight:700}
+.promo a{color:inherit;text-decoration:underline}
+.num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:var(--on-orange);font-weight:800;margin-bottom:12px}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--orange)}
 .info a{color:var(--orange);font-weight:700;text-decoration:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details[open] summary{color:var(--orange)}
+details p{margin:10px 0 0;color:var(--muted)}
+.form{display:grid;gap:12px;max-width:560px}
+.form label{font-weight:700;font-size:.9rem}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.form textarea{min-height:100px;resize:vertical}
+.form button.btn{cursor:pointer;font:inherit;font-weight:700;border:0}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:20}
 footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
 </style>
 </head>
@@ -70,11 +89,13 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 <header>
   <div class="wrap">
     <div class="brand">Tu Comercio <b>Online</b></div>
-    <a class="btn small" href="#contacto">Contacto</a>
+    <nav class="nav"><a href="#servicios">Servicios</a><a href="#como-trabajo">Cómo trabajo</a><a href="#trabajos">Trabajos</a><a href="#preguntas">Preguntas</a><a href="#consulta">Consultar</a><a href="#contacto">Contacto</a></nav>
+    <a class="btn small" href="#consulta">Consultar</a>
   </div>
 </header>
 
 <main>
+  <div class="promo">🚀 Promo de lanzamiento para los primeros clientes. <a href="#consulta">Consultá cómo aprovecharla</a></div>
   <div class="wrap">
     <div class="hero">
       <div class="dot"></div>
@@ -148,12 +169,51 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
     </div>
   </section>
 
+  <section id="como-trabajo">
+    <div class="wrap">
+      <h2>Cómo trabajo</h2>
+      <p class="sub">Un proceso simple y claro, en tres pasos.</p>
+      <div class="grid">
+        <div class="card"><div class="num">1</div><h3>Contanos tu idea</h3><p>Nos escribís por WhatsApp y vemos qué necesita tu comercio.</p></div>
+        <div class="card"><div class="num">2</div><h3>Te pasamos el presupuesto</h3><p>Un precio a medida, claro y acordado de antemano.</p></div>
+        <div class="card"><div class="num">3</div><h3>Armamos y entregamos</h3><p>Creamos tu página o tu app y te la entregamos lista para usar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <p class="sub">Lo que más nos consultan los comercios.</p>
+      <details><summary>¿Cuánto cuesta una página web?</summary><p>Depende de lo que necesite tu comercio. Escribinos por WhatsApp, contanos tu idea y te pasamos un precio a medida.</p></details>
+      <details><summary>¿Cuánto tarda en estar lista?</summary><p>Depende del tipo de página. Cuando te pasamos el presupuesto te indicamos un plazo estimado.</p></details>
+      <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio: qué vendés, tus fotos y tus datos de contacto. Nosotros nos encargamos del resto.</p></details>
+      <details><summary>¿La página se ve bien en el celular?</summary><p>Sí, nuestras páginas se adaptan a celulares, tablets y computadoras.</p></details>
+      <details><summary>¿Qué es la app de caja y stock?</summary><p>Es una app para llevar el control de stock, las ventas y la caja de tu local, con apertura y cierre.</p></details>
+    </div>
+  </section>
+
+  <section id="consulta">
+    <div class="wrap">
+      <h2>Contanos qué necesitás</h2>
+      <p class="sub">Completá los datos y te abrimos el chat de WhatsApp con tu consulta lista.</p>
+      <form class="form" onsubmit="enviar(event)">
+        <div><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" required></div>
+        <div><label for="comercio">Nombre de tu comercio</label><input id="comercio" name="comercio" type="text"></div>
+        <div><label for="tipo">¿Qué necesitás?</label><select id="tipo" name="tipo"><option>Página web</option><option>App de caja y stock</option><option>Las dos cosas</option><option>Otra consulta</option></select></div>
+        <div><label for="detalle">Contanos tu idea</label><textarea id="detalle" name="detalle"></textarea></div>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
   <section id="contacto" class="contact">
     <div class="wrap">
       <h2>¿Hablamos?</h2>
       <p class="sub">Contanos qué necesita tu comercio y te respondemos por WhatsApp.</p>
       <a class="btn" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20comercio" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
       <p class="info">WhatsApp: <a href="https://wa.me/5493875528143" target="_blank" rel="noopener">387 552-8143</a><br>Instagram: <a href="https://www.instagram.com/tucomercio.online/" target="_blank" rel="noopener">@tucomercio.online</a></p>
+      <p><a class="btn small ghost" href="https://wa.me/?text=Mir%C3%A1%20esta%20p%C3%A1gina%20de%20Tu%20Comercio%20Online%3A%20https%3A%2F%2Fnicoortubia997-dev.github.io%2Findex.html" target="_blank" rel="noopener">Compartir esta página por WhatsApp</a></p>
     </div>
   </section>
 </main>
@@ -161,5 +221,14 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 <footer>
   <div class="wrap">Tu Comercio Online · Salta, Argentina</div>
 </footer>
+<script>
+function enviar(e){
+  e.preventDefault();
+  var f=e.target;
+  var t="Hola, quiero hacer una consulta.\nNombre: "+f.nombre.value+"\nComercio: "+f.comercio.value+"\nNecesito: "+f.tipo.value+"\nIdea: "+f.detalle.value;
+  window.open("https://wa.me/5493875528143?text="+encodeURIComponent(t),"_blank");
+}
+</script>
+<a class="wa" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">💬</a>
 </body>
 </html>
