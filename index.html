@@ -78,6 +78,10 @@ h2::after{content:"";display:block;width:50px;height:3px;background:var(--gold);
 .promo a{color:inherit;text-decoration:underline}
 .num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:var(--on-orange);font-weight:800;margin-bottom:12px}
 .btn.ghost{background:transparent;color:var(--text);border:2px solid var(--orange)}
+.rub{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.rub .em{font-size:1.9rem}
+.rub h3{margin:6px 0}
+.rub .price{margin-right:14px;display:inline-block}
 .brand{display:flex;align-items:center;gap:10px}
 .stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));padding:8px 0 48px}
 .stat{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:14px;padding:18px;text-align:center}
@@ -110,19 +114,12 @@ footer{border-top:1px solid var(--line);padding:40px 0 24px;color:var(--muted);f
 .incl li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800}
 </style>
 <script>document.documentElement.className+=" js"</script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "zduw2hk3lc");
-</script>
 </head>
 <body>
 <header>
   <div class="wrap">
     <div class="brand"><svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="13" fill="#111" stroke="#d4a017" stroke-width="3"/><text x="32" y="40" font-family="Arial,sans-serif" font-weight="900" font-size="22" text-anchor="middle" fill="#fff">TC<tspan fill="#ff7a00">O</tspan></text></svg><span>Tu Comercio <b>Online</b></span></div>
-    <nav class="nav"><a href="#servicios">Servicios</a><a href="#incluye">Qué incluye</a><a href="#como-trabajo">Cómo trabajo</a><a href="#trabajos">Trabajos</a><a href="#preguntas">Preguntas</a><a href="#consulta">Consultar</a><a href="#contacto">Contacto</a></nav>
+    <nav class="nav"><a href="#servicios">Servicios</a><a href="#rubros">Rubros</a><a href="#incluye">Qué incluye</a><a href="#como-trabajo">Cómo trabajo</a><a href="#trabajos">Trabajos</a><a href="#preguntas">Preguntas</a><a href="#consulta">Consultar</a><a href="#contacto">Contacto</a></nav>
     <div class="hact"><button class="theme" id="tema" type="button" aria-label="Cambiar entre modo claro y oscuro">🌓</button><a class="btn small" href="#consulta">Consultar</a></div>
   </div>
 </header>
@@ -212,9 +209,26 @@ footer{border-top:1px solid var(--line);padding:40px 0 24px;color:var(--muted);f
         <div class="ico">IE</div>
         <div>
           <h3>Inmobiliaria (página de ejemplo)</h3>
-          <p>Propiedades con filtros y favoritos, fichas con fotos, servicios, zonas, preguntas frecuentes y un formulario que envía la consulta por WhatsApp.</p>
-          <a class="btn small" href="https://nicoortubia997-dev.github.io/inmobiliaria-ejemplo/" target="_blank" rel="noopener">Ver página</a>
+          <p>Propiedades con filtros, ficha completa, favoritos, zonas de trabajo y consultas directas por WhatsApp.</p>
+          <a class="btn small" href="https://nicoortubia997-dev.github.io/inmobiliaria-ejemplo-index.html/" target="_blank" rel="noopener">Ver página</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rubros">
+    <div class="wrap">
+      <h2>Páginas para todo tipo de comercio</h2>
+      <p class="sub">Si se puede vender, lo podemos mostrar en internet. Estos son algunos de los rubros para los que armamos páginas.</p>
+      <div class="rub">
+        <div class="card"><div class="em">🏠</div><h3>Electrodomésticos</h3><p>Catálogo con categorías, buscador y pedido por WhatsApp.</p><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20de%20electrodom%C3%A9sticos" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🚗</div><h3>Autos y motos</h3><p>Fichas de cada vehículo y consulta directa por WhatsApp.</p><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20de%20autos%20y%20motos" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🥖</div><h3>Alimentos</h3><p>Catálogo, carrito y pedido listo para enviar por WhatsApp.</p><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20de%20alimentos" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">✨</div><h3>Productos de limpieza</h3><p>Productos, combos y pedidos por WhatsApp.</p><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio%20de%20productos%20de%20limpieza" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🏗️</div><h3>Constructoras</h3><p>Servicios, proyectos, calculadora de presupuesto y formulario.</p><a class="price" href="https://nicoortubia997-dev.github.io/constructora-ejemplo/" target="_blank" rel="noopener">Ver ejemplo →</a><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20constructora" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🏘️</div><h3>Inmobiliarias</h3><p>Propiedades con filtros, fichas, favoritos y zonas.</p><a class="price" href="https://nicoortubia997-dev.github.io/inmobiliaria-ejemplo-index.html/" target="_blank" rel="noopener">Ver ejemplo →</a><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20inmobiliaria" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🍔</div><h3>Restaurantes y confiterías</h3><p>Carta digital con el estilo de tu local.</p><a class="price" href="https://oncesas2025-cmd.github.io/confiteria-once/" target="_blank" rel="noopener">Ver ejemplo →</a><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20restaurante%20o%20confiter%C3%ADa" target="_blank" rel="noopener">Consultar →</a></div>
+        <div class="card"><div class="em">🛍️</div><h3>Y cualquier otro rubro</h3><p>Todo lo que se pueda vender. Contanos qué ofrecés y lo armamos.</p><a class="price" href="https://wa.me/5493875528143?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" target="_blank" rel="noopener">Consultar →</a></div>
       </div>
     </div>
   </section>
